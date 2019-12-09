@@ -5,7 +5,7 @@ const Users = require("../../models/users");
 exports.allUsers = async function(req, res) {
   Users.find({}, (err, users) => {
     if (!err) {
-      res.json(users:users});
+      res.json({users:users});
     }
   });
 };
