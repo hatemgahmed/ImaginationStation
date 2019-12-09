@@ -5,7 +5,7 @@ const Notifications = require("../../models/notifications");
 exports.allNotifications = async function(req, res) {
   Notifications.find({}, (err, notifications) => {
     if (!err) {
-      res.json(notifications);
+      res.json({notifications:notifications});
     }
   });
 };
